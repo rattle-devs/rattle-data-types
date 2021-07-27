@@ -14,9 +14,11 @@ set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS} -std=c17 -Wall -Wall -Werror -Wshadow -Wdouble-promotion -Wformat -Wformat -Wformat-overflow -Wformat-truncation -Wundef -fno-common -Wconversion -ffunction-sections -Wpadded -g3")
 
 add_subdirectory("Vector")
+add_subdirectory("List")
 message("sub")
 add_library(data-types null.c)
 target_link_libraries(data-types PUBLIC Vector)
+target_link_libraries(data-types PUBLIC List)
 
 IF(CMAKE_BUILD_TYPE MATCHES DEBUG)
     enable_testing()
