@@ -6,7 +6,10 @@ typedef struct LIST_STRUCT {
     Node* tail;
 } List;
 
-List* list_init(Node* head);
+List* list_init();
+List* list_init_with_head(Node* head);
+List* list_init_with_tail(Node* tail);
+List* list_init_with_head_tail(Node* head, Node* tail);
 
 void list_add_tail(List* list, Node* node);
 
@@ -17,4 +20,6 @@ Node* list_pop_tail(List* list);
 Node* list_head(List* list);
 
 Node* list_tail(List* list);
+
+void list_free(List* list)
 #endif //RATTLE_DATA_TYPES_LIST_H
