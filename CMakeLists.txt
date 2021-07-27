@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 # set the project name
-project(Rattle-datatypes VERSION 0.1)
+project(Rattle-data-types VERSION 0.1)
 
 #config file
 configure_file(config.h.in config.h)
@@ -14,6 +14,9 @@ set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS} -std=c17 -Wall -Wall -Werror -Wshadow -Wdouble-promotion -Wformat -Wformat -Wformat-overflow -Wformat-truncation -Wundef -fno-common -Wconversion -ffunction-sections -Wpadded -g3")
 
 add_subdirectory("Vector")
+message("sub")
+add_library(data-types null.c)
+target_link_libraries(data-types PUBLIC Vector)
 
 IF(CMAKE_BUILD_TYPE MATCHES DEBUG)
     enable_testing()
