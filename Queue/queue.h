@@ -1,8 +1,9 @@
 #ifndef RATTLE_DATA_TYPES_QUEUE_H
 #define RATTLE_DATA_TYPES_QUEUE_H
-#include <list.h>
+#include <node.h>
 typedef struct QUEUE_STRUCT {
-    List* inner_list;
+    Node* head;
+    Node* tail;
 } Queue;
 
 Queue* queue_init();
