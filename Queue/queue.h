@@ -7,8 +7,7 @@ typedef struct QUEUE_STRUCT {
     Node* tail;
 } Queue;
 
-Queue* queue_init();
-Queue* queue_init_with_node(Node* node);
+Queue* queue_init(Node* node);
 
 void queue_enqueue(Queue* queue, Node* node);
 

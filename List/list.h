@@ -9,10 +9,7 @@ typedef struct LIST_STRUCT {
     Node* tail;
 } List;
 
-List* list_init();
-List* list_init_with_head(Node* head);
-List* list_init_with_tail(Node* tail);
-List* list_init_with_head_tail(Node* head, Node* tail);
+List* list_init(Node* head, Node* tail);
 
 void list_add_tail(List* list, Node* node);
 

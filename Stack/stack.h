@@ -6,8 +6,7 @@ typedef struct STACK_STRUCT {
     Node* top;
 } Stack;
 
-Stack* stack_init();
-Stack* stack_init_with_node();
+Stack* stack_init(Node* node);
 
 void stack_push(Stack* stack, Node* node);
 

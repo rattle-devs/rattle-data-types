@@ -5,8 +5,7 @@ typedef struct NODE_STRUCT {
     struct NODE_STRUCT* next;
 } Node;
 
-Node* node_init(void* data);
-Node* node_init_with_next(void* data, Node* n);
+Node* node_init(void* data, Node* next);
 
 Node* node_next(Node* n);
 
