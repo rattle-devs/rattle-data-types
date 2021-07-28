@@ -18,5 +18,5 @@ Node* stack_peek(Stack* stack);
 bool stack_empty(Stack* stack);
 
 //if stack is empty free it and returns True else just returns False
-bool stack_free(Stack* stack)
+bool stack_free(Stack* stack);
 #endif //RATTLE_DATA_TYPES_STACK_H
