@@ -11,7 +11,7 @@ Queue *queue_init(Node *node) {
     return q;
 }
 
-void queue_enqueue(Queue *q, Node *node) {
+void queue_push(Queue *q, Node *node) {
     if (node == NULL)
         return;
 
@@ -24,7 +24,7 @@ void queue_enqueue(Queue *q, Node *node) {
     }
 }
 
-Node *queue_dequeue(Queue *q) {
+Node *queue_pop(Queue *q) {
     Node *tmp = q->head;
     if (tmp != NULL) {
         q->head = tmp->next;
@@ -34,7 +34,7 @@ Node *queue_dequeue(Queue *q) {
     return tmp;
 }
 
-bool queue_empty(Queue *q) {
+bool queue_is_empty(Queue *q) {
     return q->tail == NULL;
 }
 

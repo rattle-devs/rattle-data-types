@@ -57,7 +57,7 @@ Node* list_tail(List* l){
     return l->tail;
 }
 
-bool list_empty(List* l){
+bool list_is_empty(List* l){
     return l->tail == NULL;
 }
 
