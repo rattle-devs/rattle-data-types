@@ -14,7 +14,7 @@ bool vector_realloc(Vector* v, size_t new_count);
 
 Vector* vector_init(size_t count_of_elements, size_t size_of_element);
 
-// Release memory
+// Release memory if contains array of pointer remember to free them before vector
 void vector_free(Vector* v);
 
 // Returns the item at index position in the vector.
