@@ -9,12 +9,13 @@ typedef struct QUEUE_STRUCT {
 
 Queue* queue_init(Node* node);
 
-void queue_enqueue(Queue* queue, Node* node);
+//Never enqueue NULL
+void queue_push(Queue* q, Node* node);
 
-Node* queue_dequeue(Queue* queue);
+Node* queue_pop(Queue* q);
 
-bool queue_empty(Queue* queue);
+bool queue_is_empty(Queue* q);
 
 //if queue is empty free it and returns True else just returns False
-bool queue_free(Queue* queue);
+bool queue_free(Queue* q);
 #endif //RATTLE_DATA_TYPES_QUEUE_H
